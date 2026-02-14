@@ -73,7 +73,14 @@ form.addEventListener('submit', () => {
         form.action = url;
         openBox(name);
 
-    } else {
+    } else if (value === '$~ cd download resume') {
+        let name = "Download Resume";
+        let url = "./resume.pdf";
+        form.action = url;
+        openBox(name);
+
+    }
+     else {
         input.value = "$ error value"
         const wrongComm = new WinBox({
             title: `Command Error`,
